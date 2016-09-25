@@ -1,4 +1,4 @@
-var robot = require("robotjs");
+//var robot = require("robotjs");
 var OpenBCIBoard = require('openbci').OpenBCIBoard;
 var ourBoard = new OpenBCIBoard();
 ourBoard.connect('COM3') // Port name is a serial port name, see `.listPorts()` 
@@ -9,9 +9,9 @@ ourBoard.connect('COM3') // Port name is a serial port name, see `.listPorts()`
                 /** Work with sample */
                 var dat=Math.abs(sample.channelData[1]*1000).toFixed(8)
                 console.log(dat)
-                var mouseX=dat;
-                var mouseY=dat;
-                robot.moveMouse(mouseX,mouseY); 
+                // var mouseX=dat;
+                // var mouseY=dat;
+                // robot.moveMouse(mouseX,mouseY); 
                 // for (var i = 0; i < ourBoard.numberOfChannels(); i++) {
                 //     console.log("Channel " + (i + 1) + ": " + (sample.channelData[i]*1000).toFixed(8) + " mVolts.");
                 //     // prints to the console 
